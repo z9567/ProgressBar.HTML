@@ -1,0 +1,67 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /*  
+     Notice how we use view-width and view-height to
+     ensure our container is full-screen sized.
+    
+     This is a common pattern and one we will use  
+     throughout this course.
+  */
+  width: 100vw;
+  height: 100vh;
+  background: #252525;
+}
+
+.progress-bar__container {
+  display: flex;
+  /*
+    Here we used absolute units as we know
+    what size we wish our progress bar to be.
+  */
+  width: 300px;
+  height: 10px;
+  /*
+    Border radius is interesting as the roundedness
+    of the corners is entirely dependent on the size
+    of the affected element. 
+  */
+  border-radius: 20px;
+  background: #ddd;
+  overflow: hidden;
+}
+
+.progress-bar__meter {
+  /*
+    Progress meters are a great way to illustrate
+    the relative nature of the percentage unit.
+  
+    Again when using percentile units, the size is
+    calculated in relation to the closest parent with
+    a set size. 
+  
+    Try modifying the percentage below and see how the
+    progress meter fills up. 
+  */
+  width: 10%;
+  background: #0f2;
+/*   animation: progress 10s ease infinite; */
+}
+
+/* @keyframes progress {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+} */
